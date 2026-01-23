@@ -1,0 +1,101 @@
+{
+  "workflow_name": "Product Innovation Brainstorm Studio",
+  "workflow_type": "manager_subagent",
+  "nodes": [
+    {
+      "id": "input_node",
+      "type": "Input",
+      "label": "Brainstorm Input",
+      "nodeCategory": "input",
+      "position": {"x": 100, "y": 200}
+    },
+    {
+      "id": "brainstorm_manager",
+      "type": "Agent",
+      "label": "Brainstorm Orchestrator",
+      "nodeCategory": "agent",
+      "agent_id": "6973345568d85325acf4a4a3",
+      "position": {"x": 400, "y": 200}
+    },
+    {
+      "id": "market_research_agent",
+      "type": "Agent",
+      "label": "Market Research Agent",
+      "nodeCategory": "agent",
+      "agent_id": "697333e468d85325acf4a468",
+      "position": {"x": 400, "y": 350}
+    },
+    {
+      "id": "ideation_agent",
+      "type": "Agent",
+      "label": "Ideation Agent",
+      "nodeCategory": "agent",
+      "agent_id": "69733400fd60b80b175e5903",
+      "position": {"x": 600, "y": 350}
+    },
+    {
+      "id": "strategy_agent",
+      "type": "Agent",
+      "label": "Strategy Agent",
+      "nodeCategory": "agent",
+      "agent_id": "6973341ffd60b80b175e5918",
+      "position": {"x": 800, "y": 350}
+    },
+    {
+      "id": "output_node",
+      "type": "Output",
+      "label": "Innovation Report",
+      "nodeCategory": "end",
+      "position": {"x": 700, "y": 500}
+    }
+  ],
+  "edges": [
+    {"source": "input_node", "target": "brainstorm_manager"},
+    {"source": "brainstorm_manager", "target": "market_research_agent"},
+    {"source": "brainstorm_manager", "target": "ideation_agent"},
+    {"source": "brainstorm_manager", "target": "strategy_agent"},
+    {"source": "market_research_agent", "target": "output_node"},
+    {"source": "ideation_agent", "target": "output_node"},
+    {"source": "strategy_agent", "target": "output_node"}
+  ],
+  "agents": {
+    "manager": {
+      "agent_id": "6973345568d85325acf4a4a3",
+      "name": "Brainstorm Orchestrator",
+      "type": "Manager",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.4,
+      "top_p": 1
+    },
+    "sub_agents": [
+      {
+        "agent_id": "697333e468d85325acf4a468",
+        "name": "Market Research Agent",
+        "type": "Sub-Agent",
+        "provider": "Perplexity",
+        "model": "sonar-pro",
+        "temperature": 0.3,
+        "top_p": 1
+      },
+      {
+        "agent_id": "69733400fd60b80b175e5903",
+        "name": "Ideation Agent",
+        "type": "Sub-Agent",
+        "provider": "OpenAI",
+        "model": "gpt-4.1",
+        "temperature": 0.8,
+        "top_p": 0.95
+      },
+      {
+        "agent_id": "6973341ffd60b80b175e5918",
+        "name": "Strategy Agent",
+        "type": "Sub-Agent",
+        "provider": "OpenAI",
+        "model": "gpt-4.1",
+        "temperature": 0.4,
+        "top_p": 1
+      }
+    ]
+  }
+}

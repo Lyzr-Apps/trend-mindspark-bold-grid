@@ -1,0 +1,121 @@
+{
+  "workflow_name": "Product Innovation Brainstorm Studio",
+  "workflow_type": "manager_subagent",
+  "created_at": "2026-01-23",
+  "agents": {
+    "manager": {
+      "agent_id": "6973345568d85325acf4a4a3",
+      "name": "Brainstorm Orchestrator",
+      "type": "Manager",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.4,
+      "top_p": 1,
+      "description": "Coordinates the 11-step innovation framework, routes tasks to specialized sub-agents, aggregates outputs into cohesive session, and manages refinement conversations"
+    },
+    "sub_agents": [
+      {
+        "agent_id": "697333e468d85325acf4a468",
+        "name": "Market Research Agent",
+        "type": "Sub-Agent",
+        "provider": "Perplexity",
+        "model": "sonar-pro",
+        "temperature": 0.3,
+        "top_p": 1,
+        "description": "Searches for emerging trends, technologies, and market dynamics in the specified industry; identifies real disruption signals and opportunities"
+      },
+      {
+        "agent_id": "69733400fd60b80b175e5903",
+        "name": "Ideation Agent",
+        "type": "Sub-Agent",
+        "provider": "OpenAI",
+        "model": "gpt-4.1",
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "description": "Generates pain points, unconventional product ideas, unique features, hybrid concepts, and day-in-life scenarios with creative depth"
+      },
+      {
+        "agent_id": "6973341ffd60b80b175e5918",
+        "name": "Strategy Agent",
+        "type": "Sub-Agent",
+        "provider": "OpenAI",
+        "model": "gpt-4.1",
+        "temperature": 0.4,
+        "top_p": 1,
+        "description": "Evaluates ideas on innovation/market potential/trend alignment, ranks concepts, identifies obstacles with solutions, and creates phased product roadmaps"
+      }
+    ]
+  },
+  "workflow_visualization": {
+    "nodes": [
+      {
+        "id": "input_node",
+        "type": "Input",
+        "label": "Brainstorm Input",
+        "nodeCategory": "input",
+        "position": {"x": 100, "y": 200}
+      },
+      {
+        "id": "brainstorm_manager",
+        "type": "Agent",
+        "label": "Brainstorm Orchestrator",
+        "nodeCategory": "agent",
+        "position": {"x": 400, "y": 200}
+      },
+      {
+        "id": "market_research_agent",
+        "type": "Agent",
+        "label": "Market Research Agent",
+        "nodeCategory": "agent",
+        "position": {"x": 400, "y": 350}
+      },
+      {
+        "id": "ideation_agent",
+        "type": "Agent",
+        "label": "Ideation Agent",
+        "nodeCategory": "agent",
+        "position": {"x": 600, "y": 350}
+      },
+      {
+        "id": "strategy_agent",
+        "type": "Agent",
+        "label": "Strategy Agent",
+        "nodeCategory": "agent",
+        "position": {"x": 800, "y": 350}
+      },
+      {
+        "id": "output_node",
+        "type": "Output",
+        "label": "Innovation Report",
+        "nodeCategory": "end",
+        "position": {"x": 700, "y": 500}
+      }
+    ],
+    "edges": [
+      {"source": "input_node", "target": "brainstorm_manager"},
+      {"source": "brainstorm_manager", "target": "market_research_agent"},
+      {"source": "brainstorm_manager", "target": "ideation_agent"},
+      {"source": "brainstorm_manager", "target": "strategy_agent"},
+      {"source": "market_research_agent", "target": "output_node"},
+      {"source": "ideation_agent", "target": "output_node"},
+      {"source": "strategy_agent", "target": "output_node"}
+    ]
+  },
+  "response_schemas": {
+    "manager": "response_schemas/brainstorm_orchestrator_response.json",
+    "sub_agents": [
+      "response_schemas/market_research_agent_response.json",
+      "response_schemas/ideation_agent_response.json",
+      "response_schemas/strategy_agent_response.json"
+    ]
+  },
+  "status": "complete",
+  "notes": [
+    "Manager-SubAgent pattern with 1 manager and 3 sub-agents",
+    "Market Research Agent uses Perplexity sonar-pro for web search capability",
+    "Ideation Agent has high temperature (0.8) for creative generation",
+    "Strategy Agent evaluates and creates phased roadmaps",
+    "Manager orchestrates 11-step innovation framework",
+    "All agents configured with JSON-only response format for UI parsing"
+  ]
+}

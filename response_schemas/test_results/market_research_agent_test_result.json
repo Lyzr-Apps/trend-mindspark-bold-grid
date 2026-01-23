@@ -1,0 +1,87 @@
+{
+  "agent_name": "Market Research Agent",
+  "agent_id": "697333e468d85325acf4a468",
+  "test_message": "Research emerging trends in Healthcare related to AI wearables and patient medication adherence",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-01-23T08:44:28.809690",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "emerging_trends": [
+        {
+          "trend_name": "AI-driven Wearable Health Monitors",
+          "description": "Integration of AI in wearable devices to monitor real-time health metrics and predict potential health issues.",
+          "impact_score": 9
+        },
+        {
+          "trend_name": "Smart Medication Reminders",
+          "description": "Wearable devices providing AI-powered reminders and educational resources to enhance patient adherence to prescribed medication regimens.",
+          "impact_score": 8
+        },
+        {
+          "trend_name": "Personalized Health Insights",
+          "description": "Utilization of AI algorithms for personalized health insights based on user data collected from wearables.",
+          "impact_score": 7
+        }
+      ],
+      "technologies": [
+        {
+          "tech_name": "AI Algorithms for Predictive Analytics",
+          "description": "Algorithms designed to analyze health data in real-time to predict adherence issues and health risks.",
+          "adoption_stage": "Rapid Adoption"
+        },
+        {
+          "tech_name": "Wearable Sensors",
+          "description": "Advanced sensors capable of tracking a wide variety of health indicators, synced to mobile applications.",
+          "adoption_stage": "Widespread Use"
+        },
+        {
+          "tech_name": "Mobile Health Applications",
+          "description": "Apps that integrate with wearables to provide feedback and reminders about medication and health management.",
+          "adoption_stage": "Established"
+        }
+      ],
+      "market_dynamics": {
+        "market_size": "$15 billion",
+        "growth_rate": "25% CAGR",
+        "key_players": [
+          "Apple",
+          "Fitbit",
+          "Garmin",
+          "Samsung Health",
+          "Medisafe"
+        ],
+        "disruption_signals": [
+          "Increased investment in healthcare AI startups focused on wearables",
+          "Growing consumer preference for remote health monitoring solutions",
+          "Legislative support for telehealth and digital health solutions"
+        ]
+      },
+      "opportunities": [
+        {
+          "opportunity": "Partnerships with Pharmacies",
+          "rationale": "Leveraging pharmacy networks to promote medication adherence through wearable technology.",
+          "urgency": "high"
+        },
+        {
+          "opportunity": "Development of AI Analytics Platforms",
+          "rationale": "Creating platforms that aggregate and analyze data from wearables to provide actionable insights for healthcare providers.",
+          "urgency": "medium"
+        },
+        {
+          "opportunity": "Integration with Insurance Providers",
+          "rationale": "Collaborating with insurance companies to incentivize the use of wearables for medication adherence.",
+          "urgency": "high"
+        }
+      ],
+      "summary": "The healthcare industry is experiencing significant disruption through the integration of AI in wearables, enhancing medication adherence and overall patient management. Companies are focusing on technologies like predictive analytics and advanced sensors, which are reshaping patient engagement and health monitoring. The established market size and rapid growth rate indicate strong opportunities for partnerships and innovative solutions."
+    },
+    "metadata": {
+      "agent_name": "Market Research Agent",
+      "timestamp": "2023-10-06T12:00:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"emerging_trends\": [\n      {\n        \"trend_name\": \"AI-driven Wearable Health Monitors\",\n        \"description\": \"Integration of AI in wearable devices to monitor real-time health metrics and predict potential health issues.\",\n        \"impact_score\": 9\n      },\n      {\n        \"trend_name\": \"Smart Medication Reminders\",\n        \"description\": \"Wearable devices providing AI-powered reminders and educational resources to enhance patient adherence to prescribed medication regimens.\",\n        \"impact_score\": 8\n      },\n      {\n        \"trend_name\": \"Personalized Health Insights\",\n        \"description\": \"Utilization of AI algorithms for personalized health insights based on user data collected from wearables.\",\n        \"impact_score\": 7\n      }\n    ],\n    \"technologies\": [\n      {\n        \"tech_name\": \"AI Algorithms for Predictive Analytics\",\n        \"description\": \"Algorithms designed to analyze health data in real-time to predict adherence issues and health risks.\",\n        \"adoption_stage\": \"Rapid Adoption\"\n      },\n      {\n        \"tech_name\": \"Wearable Sensors\",\n        \"description\": \"Advanced sensors capable of tracking a wide variety of health indicators, synced to mobile applications.\",\n        \"adoption_stage\": \"Widespread Use\"\n      },\n      {\n        \"tech_name\": \"Mobile Health Applications\",\n        \"description\": \"Apps that integrate with wearables to provide feedback and reminders about medication and health management.\",\n        \"adoption_stage\": \"Established\"\n      }\n    ],\n    \"market_dynamics\": {\n      \"market_size\": \"$15 billion\",\n      \"growth_rate\": \"25% CAGR\",\n      \"key_players\": [\"Apple\", \"Fitbit\", \"Garmin\", \"Samsung Health\", \"Medisafe\"],\n      \"disruption_signals\": [\n        \"Increased investment in healthcare AI startups focused on wearables\",\n        \"Growing consumer preference for remote health monitoring solutions\",\n        \"Legislative support for telehealth and digital health solutions\"\n      ]\n    },\n    \"opportunities\": [\n      {\n        \"opportunity\": \"Partnerships with Pharmacies\",\n        \"rationale\": \"Leveraging pharmacy networks to promote medication adherence through wearable technology.\",\n        \"urgency\": \"high\"\n      },\n      {\n        \"opportunity\": \"Development of AI Analytics Platforms\",\n        \"rationale\": \"Creating platforms that aggregate and analyze data from wearables to provide actionable insights for healthcare providers.\",\n        \"urgency\": \"medium\"\n      },\n      {\n        \"opportunity\": \"Integration with Insurance Providers\",\n        \"rationale\": \"Collaborating with insurance companies to incentivize the use of wearables for medication adherence.\",\n        \"urgency\": \"high\"\n      }\n    ],\n    \"summary\": \"The healthcare industry is experiencing significant disruption through the integration of AI in wearables, enhancing medication adherence and overall patient management. Companies are focusing on technologies like predictive analytics and advanced sensors, which are reshaping patient engagement and health monitoring. The established market size and rapid growth rate indicate strong opportunities for partnerships and innovative solutions.\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"Market Research Agent\",\n    \"timestamp\": \"2023-10-06T12:00:00Z\"\n  }\n}"
+}
