@@ -16,6 +16,11 @@ export default defineConfig({
     headers: {
       'Content-Security-Policy': "frame-ancestors *",
     },
+    hmr: {
+      protocol: 'wss',
+      host: 'preview--trend-mindspark-bold-grid.app.architect.new',
+      clientPort: 443,
+    },
   },
   build: {
     outDir: 'dist',
